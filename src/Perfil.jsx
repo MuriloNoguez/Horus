@@ -1,7 +1,6 @@
-
 import './App.css'
 
-function App() {
+function Perfil() {
   const [count, setCount] = useState(0)
 
   return (
@@ -11,4 +10,4 @@ function App() {
   )
 }
 
-export default App
+export default Perfil
