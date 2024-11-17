@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
 const imagens = [
-  { src: '/Img1.png', alt: 'Imagem 1' },
-  { src: '/Img2.png', alt: 'Imagem 2' },
-  { src: '/Img3.png', alt: 'Imagem 3' },
-  { src: '/Img4.png', alt: 'Imagem 4' },
-  { src: '/Img5.png', alt: 'Imagem 5' },
+  { src: '/testes/Img1.png', alt: 'Imagem 1' },
+  { src: '/testes/Img2.png', alt: 'Imagem 2' },
+  { src: '/testes/Img3.png', alt: 'Imagem 3' },
+  { src: '/testes/Img4.png', alt: 'Imagem 4' },
+  { src: '/testes/Img5.png', alt: 'Imagem 5' },
 ];
 
-export function Carousel() {
+export function Carousel({ visibleImagesCount = 3 }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -23,12 +23,15 @@ export function Carousel() {
   }, [isPaused]);
 
   const getAdjacentIndexes = (index) => {
-    const prevIndex = (index - 1 + imagens.length) % imagens.length;
-    const nextIndex = (index + 1) % imagens.length;
-    return [prevIndex, nextIndex];
+    const indexes = [];
+    const half = Math.floor(visibleImagesCount / 2);
+    for (let i = -half; i <= half; i++) {
+      indexes.push((index + i + imagens.length) % imagens.length);
+    }
+    return indexes;
   };
 
-  const [prevIndex, nextIndex] = getAdjacentIndexes(selectedIndex);
+  const adjacentIndexes = getAdjacentIndexes(selectedIndex);
 
   const handleClick = (index) => {
     setSelectedIndex(index);
@@ -37,25 +40,16 @@ export function Carousel() {
   };
 
   return (
-    <div className="flex justify-center items-end  space-x-2 h-44">
-      <img
-        src={imagens[prevIndex].src}
-        alt={imagens[prevIndex].alt}
-        onClick={() => handleClick(prevIndex)}
-        className="w-24 md:w-32 lg:w-40 transition-transform duration-300 cursor-pointer opacity-75"
-      />
-      <img
-        src={imagens[selectedIndex].src}
-        alt={imagens[selectedIndex].alt}
-        onClick={() => handleClick(selectedIndex)}
-        className="w-24 md:w-32 lg:w-40 transition-transform duration-300 cursor-pointer transform -translate-y-7"
-      />
-      <img
-        src={imagens[nextIndex].src}
-        alt={imagens[nextIndex].alt}
-        onClick={() => handleClick(nextIndex)}
-        className="w-24 md:w-32 lg:w-40 transition-transform duration-300 cursor-pointer opacity-75"
-      />
+    <div className="flex justify-center items-end space-x-2 h-44">
+      {adjacentIndexes.map((index, idx) => (
+        <img
+          key={index}
+          src={imagens[index].src}
+          alt={imagens[index].alt}
+          onClick={() => handleClick(index)}
+          className={`w-24 md:w-32 lg:w-40 transition-transform duration-300 cursor-pointer ${idx === Math.floor(visibleImagesCount / 2) ? 'transform -translate-y-7' : 'opacity-75'}`}
+        />
+      ))}
     </div>
   );
 }
