@@ -1,19 +1,16 @@
 import './App.css'
 import { Carousel } from './componentes/carrossel'
+import { Header } from './componentes/header'
 
 
 
 function Home() {
   return (
     <>
-      <div>
-        <header>
-          <h1>Meu Carrossel</h1>
-        </header>
+      < Header />
         <main className='p-7 h-96'>
           <Carousel visibleImagesCount={3}/>
         </main>
-      </div>
     </>
   )
 }
