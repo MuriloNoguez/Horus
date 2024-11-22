@@ -1,8 +1,6 @@
 import './App.css'
 
 function Clientes() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       

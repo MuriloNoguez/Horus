@@ -47,7 +47,8 @@ export function Carousel({ visibleImagesCount = 3 }) {
           src={imagens[index].src}
           alt={imagens[index].alt}
           onClick={() => handleClick(index)}
-          className={`w-24 md:w-32 lg:w-40 transition-transform duration-300 cursor-pointer ${idx === Math.floor(visibleImagesCount / 2) ? 'transform -translate-y-7' : 'opacity-75'}`}
+          className={`w-24 md:w-32 lg:w-40 transition-transform duration-500 cursor-pointer 
+            ${idx === Math.floor(visibleImagesCount / 2) ? 'transform -translate-y-7' : 'opacity-75'}`}
         />
       ))}
     </div>

@@ -14,23 +14,23 @@ import Perfil from "./Perfil";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
+    element: <Home/>, //pagina inicial
   },
   {
     path: "/Login",
-    element: <Login/>
+    element: <Login/> //pagina de login (possivel mudança)
   },
   {
     path: "/Registro",
-    element: <Registro/>
+    element: <Registro/> //pagina de registro (possivel mudança)
   },
   {
-    path: "/Page-Clientes",
-    element: <Clientes/>
+    path: "/Page-Clientes", 
+    element: <Clientes/> //pagina das publicações
   },
   {
     path: "/Perfil",
-    element: <Perfil/>
+    element: <Perfil/> //pagina do perfil
   }
 ]);
 

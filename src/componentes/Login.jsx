@@ -6,6 +6,7 @@ export function Login() {
         const [password, setPassword] = useState(''); 
         const [error, setError] = useState(''); 
         const navigate = useNavigate();
+        
         const handleLogin = (e) => { 
             e.preventDefault();
             const storedUsers = JSON.parse(localStorage.getItem('users')) || []; 
