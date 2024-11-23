@@ -12,7 +12,12 @@ export default {
         'c-branco': '#FFF'
       },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif']
+        montserrat: ['Montserrat', 'sans-serif'],
+        jura: ('Jura', 'sans-serif'),
+
+      },
+      backgroundImage: {
+        'HeaderBG': "url('/public/HeaderBG.png')"
       },
 
     },

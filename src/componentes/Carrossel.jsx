@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 const imagens = [
-  { src: '/testes/Img1.png', alt: 'Imagem 1' },
-  { src: '/testes/Img2.png', alt: 'Imagem 2' },
-  { src: '/testes/Img3.png', alt: 'Imagem 3' },
-  { src: '/testes/Img4.png', alt: 'Imagem 4' },
-  { src: '/testes/Img5.png', alt: 'Imagem 5' },
+  { src: '/bike/Img1.jpg', alt: 'Imagem 1' },
+  { src: '/bike/Img2.jpg', alt: 'Imagem 2' },
+  { src: '/bike/Img3.jpg', alt: 'Imagem 3' },
+  { src: '/bike/Img4.jpg', alt: 'Imagem 4' },
+  { src: '/bike/Img5.jpg', alt: 'Imagem 5' },
 ];
 
 export function Carousel({ visibleImagesCount = 3 }) {
