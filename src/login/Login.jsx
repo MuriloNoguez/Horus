@@ -1,11 +1,12 @@
-
+import { Entrar } from "./componenteslogin/entrar"
 
 function Login() {
-  const [count, setCount] = useState(0)
+
+
 
   return (
     <>
-      
+      <Entrar />
     </>
   )
 }

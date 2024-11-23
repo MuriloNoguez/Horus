@@ -1,6 +1,5 @@
-
-import { Carousel } from './componentes/carrossel'
-import { Header } from './componentes/header'
+import { Carousel } from './componenteshome/Carrossel'
+import { Header } from './componenteshome/header'
 
 
 
