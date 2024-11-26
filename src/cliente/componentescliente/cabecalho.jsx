@@ -1,13 +1,28 @@
-function Cabecalho(){
-    const [open, setOpen] = useState (false)
+import React, { useState } from "react";
+import Modal from "react-responsive-modal";
+import { NovaPubli } from "./NovaPublic";
+import "react-responsive-modal/styles.css";
 
-    function abrirForm(){
-        setOpen(true)
+export function Cabecalho() {
+    const [publis, setPublis] = useState([]);
+    const [open, setOpen] = useState(false);
+
+    function abrirForm() {
+        setOpen(true);
     }
 
-    return(
-        <div>
-            
-        </div>
-    )
+    function fecharForm() {
+        setOpen(false);
+    }
+
+    return (
+        <>
+            <div>
+                <button onClick={abrirForm}>add</button>
+            </div>
+            <Modal open={open} onClose={fecharForm} center>
+                <NovaPubli publis={publis} setPublis={setPublis} />
+            </Modal>
+        </>
+    );
 }
