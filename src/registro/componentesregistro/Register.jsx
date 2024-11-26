@@ -14,7 +14,7 @@ export function Register({ users, setUsers }) {
         if (data.password !== data.confirmPassword) {
             setMessage('As senhas não conferem');
             return;
-        } 
+        }
         
         try {
             // Busca todos os usuários do servidor JSON
