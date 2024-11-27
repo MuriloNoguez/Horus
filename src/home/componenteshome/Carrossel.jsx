@@ -40,14 +40,14 @@ export function Carousel({ visibleImagesCount = 3 }) {
   };
 
   return (
-    <div className="flex justify-center items-end space-x-2 h-44">
+    <div className="flex justify-center items-end space-x-2 h-44 ">
       {adjacentIndexes.map((index, idx) => (
         <img
           key={index}
           src={imagens[index].src}
           alt={imagens[index].alt}
           onClick={() => handleClick(index)}
-          className={`w-24 md:w-32 lg:w-40 transition-transform duration-500 cursor-pointer 
+          className={`w-24 md:w-32 lg:w-[20.875rem] lg:h-[26.625rem] transition-transform duration-500 cursor-pointer 
             ${idx === Math.floor(visibleImagesCount / 2) ? 'transform -translate-y-7' : 'opacity-75'}`}
         />
       ))}

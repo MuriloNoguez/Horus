@@ -13,8 +13,6 @@ export default {
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
-        jura: ('Jura', 'sans-serif'),
-
       },
       backgroundImage: {
         'HeaderBG': "url('/public/HeaderBG.png')"
