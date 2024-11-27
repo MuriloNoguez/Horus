@@ -16,9 +16,12 @@ export function NovaPubli({publis,setPublis}){
         const publi2 = [...publis, novo];
         setPublis(publi2);
 
-        fetch ('https://localhost:3000/publis', {
+        fetch ('http://localhost:3000/publis', {
             method: 'POST',
-            body: JSON.stringify(novo)
+            body: JSON.stringify(novo),
+            headers: {
+                'Content-Type': 'application/json'
+            }
         });
         reset();
     }
@@ -28,8 +31,10 @@ export function NovaPubli({publis,setPublis}){
             <form onSubmit={handleSubmit(incluirPubli)}>
                     <div>
 
-                        <label htmlFor="foto" >foto</label>
-                        <input type="file" id="foto" required {...register("foto")} />
+                        {/* projeto futuro */}
+
+                        {/* <label htmlFor="foto" >foto</label>
+                        <input type="file" id="foto" required {...register("foto")} />*/}
                 
                 
                         <label htmlFor="esporte" >esporte</label>

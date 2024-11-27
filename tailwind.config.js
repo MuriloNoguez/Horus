@@ -4,7 +4,23 @@ export default {
     "./src/**/*.{html,js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'c-Azul': '#001425', //Tom do principal
+        'c-creme': '#F8ECCE', //Tom rpincipal 2
+        'c-cinza': '#212121',
+        'c-branco': '#FFF'
+      },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        jura: ('Jura', 'sans-serif'),
+
+      },
+      backgroundImage: {
+        'HeaderBG': "url('/public/HeaderBG.png')"
+      },
+
+    },
   },
   plugins: [],
 }
