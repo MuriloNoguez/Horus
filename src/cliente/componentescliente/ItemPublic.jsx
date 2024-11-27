@@ -1,21 +1,18 @@
-import { data } from "autoprefixer"
 import { useEffect, useState } from "react"
 
-export function Itempubli ({ vagas }) {
+export function Itempubli () {
     const [publicacoes, setPublicacoes] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:3000/publis')
-        .then(response => response.json)
-        .then(data => {
-            setPublicacoes(data)
-        })
-        .catch(error => {
-            console.error("Erro ao buscar publicações", error);
-            
-        });
-        
-    }, [])
+        .then(response => response.json())
+            .then(data => {
+                setPublicacoes(data);
+            })
+            .catch(error => {
+                console.error("Erro ao buscar publicações:", error);
+            });
+    }, []);
         
 return(
     <>

@@ -1,6 +1,4 @@
 import { Cabecalho } from "./componentescliente/cabecalho"
-import { Filtros } from "./componentescliente/Filtros"
-import { Itempubli } from "./componentescliente/ItemPublic"
 import { Lista } from "./componentescliente/Lista"
 
 
@@ -13,7 +11,7 @@ function Clientes() {
 
 {/* <Filtros /> */}
 
-<Itempubli />
+<Lista />
 </div>
 
 
