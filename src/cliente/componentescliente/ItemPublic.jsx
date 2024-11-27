@@ -1,13 +1,22 @@
-import { useState } from "react"
+import { data } from "autoprefixer"
+import { useEffect, useState } from "react"
 
 export function Itempubli ({ vagas }) {
-    const [participantes, setParticipantes] = useState(0)
+    const [publicacoes, setPublicacoes] = useState([])
 
-    function Participar(){
-        if (participantes < vagas ){
-            setParticipantes (participantes + 1)
-        }
-    }
+    useEffect(() => {
+        fetch('http://localhost:3000/publis')
+        .then(response => response.json)
+        .then(data => {
+            setPublicacoes(data)
+        })
+        .catch(error => {
+            console.error("Erro ao buscar publicações", error);
+            
+        });
+        
+    }, [])
+        
 return(
     <>
     {publicacoes.map((publicacao, index) => (
