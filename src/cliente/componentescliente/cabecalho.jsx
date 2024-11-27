@@ -17,7 +17,7 @@ export function Cabecalho() {
 
     return (
         <>
-            <aside class="bg-c-Azul border-r-[0.5px] border-c-creme text-c-creme font-bold col-span-2 p-5 flex justify-center">
+            <aside class="md:bg-c-Azul md:border-r-[0.5px] md:border-c-creme md:text-c-creme md:font-bold md:col-span-2 p-5 md:flex md:justify-center hidden">
                 <div className="flex flex-col  items-center justify-center gap-8 fixed">
                 <img src="public\SimbolBg-P.png" alt="" className="w-[5.5rem] "/>
 
@@ -31,9 +31,9 @@ export function Cabecalho() {
                     <img src="public\home.png" alt="" />
                     <h3>Inicio</h3>
                 </button>
-                <button className="flex w-[7rem] gap-4 justify-items-start items-center">
+                <button onClick={abrirForm} className="flex w-[7rem] gap-4 justify-items-start items-center">
                     <img src="public\IconAdd.png" alt="" />
-                    <h3 onClick={abrirForm}>Criar</h3>
+                    <h3 >Criar</h3>
                 </button>
                 <button className="flex w-[7rem] gap-4 justify-items-start items-center">
                     <img src="public\perfil.png" alt="" />

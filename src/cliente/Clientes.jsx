@@ -6,7 +6,7 @@ import { Lista } from "./componentescliente/Lista"
 function Clientes() {
   return (
     <>
-<div class="grid grid-cols-12 h-screen ">
+<div class="grid md:grid-cols-12 h-screen ">
   
 <Cabecalho />
 
