@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 export function Header () {
     return(
         <>
-        <header className="bg-c-Azul flex justify-between p-5 ">
+        <header className="bg-c-Azul flex justify-between px-5 fixed w-[100%] md:h-[6.25rem] h-[2.56rem] items-center">
             <div>
-                <img src="./SimbolBg-P.png" alt="Logo" className="md:h-[2.75rem]"/>
+                <img src="./SimbolBg-P.png" alt="Logo" className="md:h-[2.75rem] h-[2rem]"/>
             </div>
             <div className="flex justify-center items-center">
                 <button className="md:hidden ">
