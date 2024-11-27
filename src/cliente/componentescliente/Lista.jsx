@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Itempubli } from "./ItemPublic";
 
 export function Lista() {
     const [publicacoes, setPublicacoes] = useState([]);
@@ -16,8 +17,13 @@ export function Lista() {
     }, []);
 
     return (
-        <div>
-            <h1>Publicações</h1>
+
+    <>
+        <main class="bg-c-Azul  col-span-10">
+            < Itempubli />
+        </main>
+
+                {/* <div>
             <ul>
                 {publicacoes.map((publicacao, index) => (
                     <li key={index}>
@@ -30,7 +36,9 @@ export function Lista() {
                     </li>
                 ))}
             </ul>
-        </div>
+        </div> */}
+    </>
+    
     );
 }
 

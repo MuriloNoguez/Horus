@@ -1,20 +1,22 @@
 import { Cabecalho } from "./componentescliente/cabecalho"
-import { Filtros } from "./componentescliente/Filtro"
+import { Filtros } from "./componentescliente/Filtros"
 import { Lista } from "./componentescliente/Lista"
 
 
 function Clientes() {
   return (
     <>
-      <div>
-        <Cabecalho/>
-      </div>
-      <div>
-        <Lista/>
-      </div>
-      <div>
-        <Filtros/>
-      </div>
+<div class="grid grid-cols-12 h-screen ">
+  
+<Cabecalho />
+
+{/* <Filtros /> */}
+
+<Lista />
+</div>
+
+
+
     </>
   )
 }
