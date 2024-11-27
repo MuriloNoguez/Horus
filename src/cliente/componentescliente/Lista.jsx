@@ -29,12 +29,12 @@ export function Lista() {
             <ul>
                 {publicacoes.map((publicacao, index) => (
                     <li key={index}>
-                        <h2>{publicacao.esporte}</h2>
-                        <p>Local: {publicacao.local}</p>
-                        <p>Data: {publicacao.data}</p>
-                        <p>Hora: {publicacao.hora}</p>
-                        <p>Vagas: {publicacao.vagas}</p>
-                        <p>Distância: {publicacao.distancia}</p>
+                        <h2></h2>
+                        <p>Local: </p>
+                        <p>Data: </p>
+                        <p>Hora: </p>
+                        <p>Vagas: </p>
+                        <p>Distância: </p>
                     </li>
                 ))}
             </ul>
