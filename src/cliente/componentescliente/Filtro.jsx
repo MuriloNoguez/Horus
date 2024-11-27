@@ -1,6 +1,6 @@
 
 
-export function Filtro ({ filtro, setFiltro}) {
+export function Filtros ({ filtro, setFiltro}) {
 
     <div>
         

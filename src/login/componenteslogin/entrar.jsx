@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate, Link} from 'react-router-dom'; 
 
 // Componente Entrar para autenticação de usuários
 export function Entrar() {
@@ -35,12 +35,47 @@ export function Entrar() {
 
     return (
         <>
-            <form onSubmit={handleSubmit(handleLogin)}>
-                <input type="email" placeholder="Email" {...register('email')} required />
-                <input type="password" placeholder="Senha" {...register('password')} required />
-                <input type="submit" value='Login' />
-                {message && <p>{message}</p>}
-            </form>
+      <body className="flex space-between bg-blue-700">
+    <div>
+      <h1>Login on Horus</h1>
+      <br />
+      <h3>E-mail:</h3>
+      <input type="text" value= "email" placeholder="Digite seu E-mail: " />
+      <br />
+      <h3>Senha:</h3>
+      <input type="text" value="senha" placeholder="Digite sua Senha: " />
+      <p>Esqueceu a senha:
+        <button>clique aqui</button>
+      </p>
+      <br />
+      <button>Login</button>
+      <p>Ou faça login com</p>
+      <button>Gmail</button>
+      <button>Facebook</button>
+      <button>Discord</button>
+    </div>
+
+    <div>
+      <img src="Horus" alt="" />
+      <h1>Não possui conta?</h1>
+      <h2>Registre-se agora e desfrute de nossos recursos</h2>
+      <br />
+      <button>
+      <Link to={'/Registro'}>
+        Registre-se</Link></button>
+    </div>
+  </body>
         </>
     );
+
+    // return (
+    //     <>
+    //         <form onSubmit={handleSubmit(handleLogin)}>
+    //             <input type="email" placeholder="Email" {...register('email')} required />
+    //             <input type="password" placeholder="Senha" {...register('password')} required />
+    //             <input type="submit" value='Login' />
+    //             {message && <p>{message}</p>}
+    //         </form>
+    //     </>
+    // );
 }
