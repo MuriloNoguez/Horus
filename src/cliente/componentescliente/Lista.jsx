@@ -19,7 +19,7 @@ export function Lista() {
     return (
 
     <>
-        <main class="bg-c-Azul  md:col-span-10 w-[100%] flex justify-center">
+        <main class="bg-c-Azul  flex justify-center">
             <div className="text-c-creme grid md:grid-cols-3 grid-cols-1 gap-16">
                 < Itempubli />
             </div>

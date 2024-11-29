@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate, Link} from 'react-router-dom'; 
+import { useNavigate, Link } from 'react-router-dom';
 
 // Componente Entrar para autenticação de usuários
 export function Entrar() {
@@ -34,48 +34,51 @@ export function Entrar() {
     };
 
     return (
-        <>
-      <body className="flex space-between bg-blue-700">
-    <div>
-      <h1>Login on Horus</h1>
-      <br />
-      <h3>E-mail:</h3>
-      <input type="text" value= "email" placeholder="Digite seu E-mail: " />
-      <br />
-      <h3>Senha:</h3>
-      <input type="text" value="senha" placeholder="Digite sua Senha: " />
-      <p>Esqueceu a senha:
-        <button>clique aqui</button>
-      </p>
-      <br />
-      <button>Login</button>
-      <p>Ou faça login com</p>
-      <button>Gmail</button>
-      <button>Facebook</button>
-      <button>Discord</button>
-    </div>
+      <section className="flex items-center justify-center h-screen md:bg-gradient-to-r from-[#001425] to-[#004A8B]">
+        <div className='bg-c-creme w-[38.875rem] h-[39.875rem]'>
+          <form onSubmit={handleSubmit(handleLogin)} >
+            <h1>Faça seu Login na Horus</h1>
+            <input
+                    type="email"
+                    placeholder="Digite o email"
+                    {...register('email', { required: 'Email é obrigatório' })}
+                    className="input input-bordered w-full"
+                />
+                <input
+                    type="password"
+                    placeholder="Digite sua Senha"
+                    {...register('password', { required: 'Senha é obrigatória' })}
+                    className="input input-bordered w-full"
+                />
+                <p>Esqueceu a senha?
+                    <button className="text-blue-500">Clique aqui</button>
+                </p>
+                <button type="submit" className="btn btn-primary w-full">Login</button>
+                <div>
+                  <hr />
+                  <p>Ou faça login com</p>
+                  <hr />
+                </div>
+                <div>
+                  <button className='w-[3.125rem] h-[3.125rem] bg-black rounded-full'><img src="public\perfil.png" alt="" /></button>
+                  <button className='w-[3.125rem] h-[3.125rem] bg-black rounded-full'><img src="public\perfil.png" alt="" /></button>
+                  <button className='w-[3.125rem] h-[3.125rem] bg-black rounded-full'><img src="public\perfil.png" alt="" /></button>
+                  {message && <p className="text-center text-red-500">{message}</p>}
+                </div>
 
-    <div>
-      <img src="Horus" alt="" />
-      <h1>Não possui conta?</h1>
-      <h2>Registre-se agora e desfrute de nossos recursos</h2>
-      <br />
-      <button>
-      <Link to={'/Registro'}>
-        Registre-se</Link></button>
-    </div>
-  </body>
-        </>
+                
+          </form>
+        </div>
+        <div className='bg-gradient-to-r from-[#001425] to-[#26A6D5] w-[39.25rem] h-[39.875rem]'>
+          <img src="SimbolBg-P.png" alt="" />
+          <h1>Não possui conta?</h1>
+          <h2>Registre-se agora e desfrute de nossos recursos</h2>
+          <Link to={'/Registro'}>
+              <button className="btn btn-accent">Registre-se</button>
+          </Link>
+        </div>
+
+      </section>
+        
     );
-
-    // return (
-    //     <>
-    //         <form onSubmit={handleSubmit(handleLogin)}>
-    //             <input type="email" placeholder="Email" {...register('email')} required />
-    //             <input type="password" placeholder="Senha" {...register('password')} required />
-    //             <input type="submit" value='Login' />
-    //             {message && <p>{message}</p>}
-    //         </form>
-    //     </>
-    // );
 }
