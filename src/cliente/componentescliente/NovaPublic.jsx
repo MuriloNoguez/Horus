@@ -27,39 +27,45 @@ export function NovaPubli({publis,setPublis}){
     }
 
     return(
-        <>
-            <form onSubmit={handleSubmit(incluirPubli)}>
-                    <div>
+     
+            <form onSubmit={handleSubmit(incluirPubli)} className="bg-c-Azul md:min-h-[90vh] md:w-[30rem] w-[20rem]">
+
 
                         {/* projeto futuro */}
 
                         {/* <label htmlFor="foto" >foto</label>
                         <input type="file" id="foto" required {...register("foto")} />*/}
                 
-                
-                        <label htmlFor="esporte" >esporte</label>
-                        <input type="text" id="eporte" required {...register("esporte")} />
-                
-                        <label htmlFor="local" >local</label>
-                        <input type="text" id="local" required {...register("local")} />
-                
-                        <label htmlFor="vagas" >vagas</label>
-                        <input type= "number" id="vagas" required {...register("vagas")} />
-
-                        <label htmlFor="data" >data</label>
-                        <input type= "date" id="data" required {...register("data")} />
-
-                        <label htmlFor="hora" >hora</label>
-                        <input type= "time" id="hora" required {...register("hora")} />
-                        
-                        <label htmlFor="distancia" >distancia</label>
-                        <input type= "text" id="distancia" required {...register("distancia")} />
-                    <div>
-                        <input type="submit" value="Incluir" className="h-[4.0625rem] w-[19.3125rem] text-[2rem] bg-[#407241] text-white rounded-2xl mt-6"/>
+                        <div className="flex w-[100%] border-t-c-creme border-b-c-creme border-2 items-center p-2">
+                            <img src="public\perfil.png" alt="" className="w-[2.625rem] h-[2.625rem]"/>
+                            <input type="text" id="eporte"  required {...register("esporte")} className="bg-transparent font-bold text-c-creme p-5 w-full" placeholder='Esporte'/>
+                        </div>
+                        <div className="flex w-[100%] border-t-c-creme border-b-c-creme border-2 items-center p-2">
+                            <img src="public\perfil.png" alt="" className="w-[2.625rem] h-[2.625rem]"/>
+                            <input type="text" id="local" required {...register("local")} className="bg-transparent font-bold text-c-creme p-5" placeholder='Local'/>
+                        </div>
+                        <div className="flex w-[100%] border-t-c-creme border-b-c-creme border-2 items-center p-2">
+                            <img src="public\perfil.png" alt="" className="w-[2.625rem] h-[2.625rem]"/>
+                            <input type= "number" id="vagas" required {...register("vagas")} className="bg-transparent font-bold text-c-creme p-5" placeholder='Vagas'/>
+                        </div>
+                        <div className="flex w-[100%] border-t-c-creme border-b-c-creme border-2 items-center p-2">
+                            <img src="public\perfil.png" alt="" className="w-[2.625rem] h-[2.625rem]"/>
+                            <input type= "date" id="data" required {...register("data")}  className="bg-transparent font-bold text-c-creme p-5" />
+                        </div>
+                        <div className="flex w-[100%] border-t-c-creme border-b-c-creme border-2 items-center p-2">
+                            <img src="public\perfil.png" alt="" className="w-[2.625rem] h-[2.625rem]"/>
+                            <input type= "time" id="hora" required {...register("hora")}   className="bg-transparent font-bold text-c-creme p-5" />
+                        </div>
+                        <div className="flex w-[100%] border-t-c-creme border-b-c-creme border-2 items-center p-2">
+                            <img src="public\perfil.png" alt="" className="w-[2.625rem] h-[2.625rem]"/>
+                            <input type= "text" id="distancia" required {...register("distancia")}  className="bg-transparent font-bold text-c-creme p-5" placeholder='Distancia'/>
+                        </div>
+            
+                    <div className="flex justify-center items-center">
+                        <input type="submit" value="Incluir" className="h-[3.0625rem] w-[19.3125rem] text-[2rem] bg-c-creme rounded-2xl mt-6 mb-6 text-c-Azul"/>
                     </div>                
-                </div>
             </form>
-        </>
+
     )
 
 }

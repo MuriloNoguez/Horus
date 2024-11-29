@@ -48,9 +48,14 @@ export function Cabecalho() {
                 
                 
             </aside>
-            <Modal open={open} onClose={fecharForm} center>
+            <Modal
+                open={open}
+                onClose={fecharForm}
+                center
+>              
                 <NovaPubli publis={publis} setPublis={setPublis} />
             </Modal>
+
         </>
     );
 }

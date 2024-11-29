@@ -34,47 +34,56 @@ export function Entrar() {
     };
 
     return (
-      <section className="flex items-center justify-center h-screen md:bg-gradient-to-r from-[#001425] to-[#004A8B]">
-        <div className='bg-c-creme w-[38.875rem] h-[39.875rem]'>
+      <section className="flex items-center justify-center md:flex-row flex-col-reverse min-h-screen md:bg-gradient-to-r from-[#001425] to-[#004A8B] bg-c-Azul">
+        <div className='bg-c-creme md:w-[38.875rem] md:h-[39.875rem] w-[22.4375rem] h-[27.375rem] text-c-Azul flex flex-col items-center justify-center p-8 md:rounded-l-xl rounded-xl'>
           <form onSubmit={handleSubmit(handleLogin)} >
-            <h1>Faça seu Login na Horus</h1>
-            <input
+            <h1 className='text-c-Azul md:text-[2.5rem] text-[1.125rem] font-bold text-center md:block hidden'>Login na Horus</h1>
+            <div className='flex flex-col p-5'>
+              <label className='md:text-[1.25rem]'>E-mail</label>
+              <input
                     type="email"
                     placeholder="Digite o email"
                     {...register('email', { required: 'Email é obrigatório' })}
-                    className="input input-bordered w-full"
+                    className="md:w-[26rem] md:h-[2.3125rem] border-c-Azul border-2 rounded-md bg-transparent p-3 md:text-[1.125rem] text-[0.875rem] w-[17.4375rem] h-[1.8125rem]" 
                 />
+                <label className='md:text-[1.25rem] pt-4'>Senha</label>
                 <input
                     type="password"
                     placeholder="Digite sua Senha"
                     {...register('password', { required: 'Senha é obrigatória' })}
-                    className="input input-bordered w-full"
+                    className="md:w-[26rem] md:h-[2.3125rem] border-c-Azul border-2 rounded-md bg-transparent p-3 md:text-[1.125rem] text-[0.875rem] w-[17.4375rem] h-[1.8125rem]"
                 />
-                <p>Esqueceu a senha?
+                <p className='md:text-[0.9375rem] text-[0.75rem]'>Esqueceu a senha?
                     <button className="text-blue-500">Clique aqui</button>
                 </p>
-                <button type="submit" className="btn btn-primary w-full">Login</button>
-                <div>
-                  <hr />
-                  <p>Ou faça login com</p>
-                  <hr />
+                <button type="submit" className="md:w-[26rem] md:h-[2.3125rem] md:text-[1.5rem] bg-c-Azul text-c-creme font-bold rounded-md mt-5">Login</button>
+                <div className='flex md:w-[26rem] items-center justify-around mt-5'>
+                  <hr className='md:w-[8.0625rem] w-[5.40731rem] border-2 border-c-Azul'/>
+                  <p className='md:text-[0.9375rem] text-[0.625rem]'>Ou faça login com</p>
+                  <hr className='md:w-[8.0625rem] w-[5.40731rem] border-2 border-c-Azul'/>
                 </div>
-                <div>
+                <div className='md:w-[26rem] flex justify-around items-center mt-5'>
                   <button className='w-[3.125rem] h-[3.125rem] bg-black rounded-full'><img src="public\perfil.png" alt="" /></button>
                   <button className='w-[3.125rem] h-[3.125rem] bg-black rounded-full'><img src="public\perfil.png" alt="" /></button>
                   <button className='w-[3.125rem] h-[3.125rem] bg-black rounded-full'><img src="public\perfil.png" alt="" /></button>
                   {message && <p className="text-center text-red-500">{message}</p>}
                 </div>
+            </div>
+            
+                
+                
+                
 
                 
           </form>
         </div>
-        <div className='bg-gradient-to-r from-[#001425] to-[#26A6D5] w-[39.25rem] h-[39.875rem]'>
-          <img src="SimbolBg-P.png" alt="" />
-          <h1>Não possui conta?</h1>
-          <h2>Registre-se agora e desfrute de nossos recursos</h2>
+        <div className='md:bg-gradient-to-r from-[#26A6D5] to-[#001425] bg-transparent md:w-[39.25rem] md:h-[39.875rem] rounded-r-xl text-c-creme flex flex-col items-center justify-center'>
+          <img src="SimbolBg-P.png" alt="" className='md:w-[12.5rem] md:mb-10'/>
+          <h2 className='md:hidden text-[2.5rem] font-bold'>Login</h2>
+          <h1 className='md:text-[2.5rem]  md:block hidden font-bold text-center'>Não possui conta?</h1>
+          <h2 className='md:text-[2rem] md:block hidden text-center'>Registre-se agora e desfrute <br /> de nossos recursos</h2>
           <Link to={'/Registro'}>
-              <button className="btn btn-accent">Registre-se</button>
+              <button className="md:w-[26rem] md:h-[2.3125rem] md:text-[1.5rem] bg-transparent text-c-creme border-2 border-c-creme font-bold rounded-md mt-5 md:block hidden">Registre-se</button>
           </Link>
         </div>
 
