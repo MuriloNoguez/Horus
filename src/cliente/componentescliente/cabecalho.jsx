@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-responsive-modal";
 import { NovaPubli } from "./NovaPublic";
 import "react-responsive-modal/styles.css";
@@ -6,6 +6,18 @@ import "react-responsive-modal/styles.css";
 export function Cabecalho() {
     const [publis, setPublis] = useState([]);
     const [open, setOpen] = useState(false);
+    const [termoPesquisa, setTermoPesquisa] = useState(''); // Estado para armazenar o termo de pesquisa
+    const [publicacoesFiltradas, setPublicacoesFiltradas] = useState([]); // Estado para armazenar as publicações filtradas
+
+    useEffect(() => {
+        // Filtrar publicações com base no termo de pesquisa
+        const filtradas = publis.filter(publicacao =>
+            publicacao.local.toLowerCase().includes(termoPesquisa.toLowerCase()) ||
+            publicacao.hora.toLowerCase().includes(termoPesquisa.toLowerCase()) ||
+            publicacao.esporte.toLowerCase().includes(termoPesquisa.toLowerCase())
+        );
+        setPublicacoesFiltradas(filtradas);
+    }, [termoPesquisa, publis]);
 
     function abrirForm() {
         setOpen(true);
@@ -14,6 +26,11 @@ export function Cabecalho() {
     function fecharForm() {
         setOpen(false);
     }
+
+    // Função para manipular a mudança no termo de pesquisa
+    const handlePesquisaChange = (event) => {
+        setTermoPesquisa(event.target.value);
+    };
 
     return (
         <>
@@ -25,7 +42,13 @@ export function Cabecalho() {
 
                     <div className="border-2 border-c-creme rounded-md md:flex items-center p-1   hidden">
                     <img src="public\lupa.png" alt="" className="w-[1rem]"/>
-                    <input type="text" name="busca" id="" placeholder="Buscar" className="bg-transparent w-[7rem] text-center focus:outline-none"/>
+                    <input 
+                    type="text"
+                    value={termoPesquisa}
+                    onChange={handlePesquisaChange}
+                    placeholder="Pesquisar"
+                    
+                    className="bg-transparent w-[7rem] text-center focus:outline-none"/>
                 </div>
 
                 <div>

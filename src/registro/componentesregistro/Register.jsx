@@ -45,6 +45,8 @@ export function Register({ users, setUsers }) {
                         }
                     });
 
+                    localStorage.setItem('cpfUsuario', newUser.cpf);
+
                     // Mensagem de sucesso e reset do formulário
                     setMessage('Usuário cadastrado com sucesso');
                     reset();
@@ -59,7 +61,7 @@ export function Register({ users, setUsers }) {
 
     return (
         <section className="flex items-center justify-center md:flex-row flex-col-reverse min-h-screen md:bg-gradient-to-r from-[#001425] to-[#004A8B] bg-c-Azul">
-            <div className='bg-c-creme md:w-[38.875rem] md:h-[39.875rem] w-[22.4375rem] h-[27.375rem] text-c-Azul flex flex-col items-center justify-center p-8 md:rounded-l-xl rounded-xl'>
+            <div className='bg-c-creme md:w-[38.875rem] md:h-[39.875rem] w-[22.4375rem] h-[27.375rem] text-c-Azul flex flex-col items-center justify-center p-8 md:rounded-l-xl rounded-l-xl'>
                 <form onSubmit={handleSubmit(handleRegister)}>
                     <h1 className='text-c-Azul md:text-[2.5rem] text-[1.125rem] font-bold text-center md:block hidden'>Registro na Horus</h1>
                     <div className='flex flex-col p-5'>
