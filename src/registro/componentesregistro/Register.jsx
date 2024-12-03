@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Componente Register para registro de novos usuários
 export function Register({ users, setUsers }) {
@@ -110,7 +110,7 @@ export function Register({ users, setUsers }) {
                 <h2 className='md:hidden text-[2.5rem] font-bold'>Registro</h2>
                 <h1 className='md:text-[2.5rem]  md:block hidden font-bold text-center'>Já possui conta?</h1>
                 <h2 className='md:text-[2rem] md:block hidden text-center'>Faça login agora e desfrute <br /> de nossos recursos</h2>
-                <button className="md:w-[26rem] md:h-[2.3125rem] md:text-[1.5rem] bg-transparent text-c-creme border-2 border-c-creme font-bold rounded-md mt-5 md:block hidden">Login</button>
+                <button className="md:w-[26rem] md:h-[2.3125rem] md:text-[1.5rem] bg-transparent text-c-creme border-2 border-c-creme font-bold rounded-md mt-5 md:block hidden"><Link to={'/Login'} href="" className="md:text-[1.5rem] text-[0.625rem] text-center">Login</Link></button>
             </div>
         </section>
     );

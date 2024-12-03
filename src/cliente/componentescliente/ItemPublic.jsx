@@ -57,7 +57,13 @@ export function Itempubli() {
     const Nome = (cpf) => {
         const usuario = usuarios.find(user => user.cpf === cpf);
         console.log("CPF buscado:", cpf, "Usuário encontrado:", usuario); // Log de depuração
-        return usuario ? usuario.nome : "Usuário desconhecido";
+
+        if (usuario) {
+            const [primeiroNome] = usuario.nome.split(' ');
+            return primeiroNome;
+        } else {
+            return "Usuário desconhecido";
+        }
     };
 
     return (
