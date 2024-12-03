@@ -3,6 +3,13 @@
 :root {
   --font-montserrat: 'Montserrat', sans-serif;
 }
+@layer utilities {
+  input[type="date"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
 
 body {
   font-family: var(--font-montserrat);

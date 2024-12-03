@@ -8,16 +8,13 @@ export function Header () {
                 <img src="./SimbolBg-P.png" alt="Logo" className="md:h-[2.75rem] h-[2rem]"/>
             </div>
             <div className="flex justify-center items-center">
-                <button className="md:hidden ">
-                    <img src="./MenuH.png" alt="" />
-                </button>
-                <div className="hidden md:flex md:w-[27rem] md:justify-between ">
-                    <button className="bg-c-creme text-c-Azul font-montserrat font-bold text-lg w-[12.4375rem] h-[2.3125rem] rounded-lg">
-                        <Link to={'/Login'} href="">Login</Link>
+                <div className=" flex md:w-[27rem] w-[12rem] justify-between ">
+                    <button className="bg-c-creme text-c-Azul font-montserrat font-bold md:text-lg md:w-[12.4375rem] md:h-[2.3125rem] md:rounded-lg rounded-sm w-[5.5rem] h-[0.9375rem] flex justify-center items-center">
+                        <Link to={'/Login'} href="" className="md:text-[1.5rem] text-[0.625rem] text-center">Login</Link>
                     </button>
-                    <button className="border-c-creme border-2 text-c-creme font-montserrat font-bold text-lg w-[12.4375rem] h-[2.3125rem] rounded-lg">
+                    <button className="border-c-creme border-2 text-c-creme font-montserrat font-bold md:text-lg md:w-[12.4375rem] md:h-[2.3125rem] md:rounded-lg rounded-sm w-[5.5rem] h-[0.9375rem] flex justify-center items-center">
                         <Link to={'/Registro'}
-                            href="">Registre-se</Link>
+                            href="" className="md:text-[1.5rem] text-[0.625rem]">Registre-se</Link>
                     </button>
                 </div>
                 

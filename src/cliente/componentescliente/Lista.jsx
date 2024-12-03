@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Itempubli } from "./ItemPublic";
 
 export function Lista() {
     const [publicacoes, setPublicacoes] = useState([]);
@@ -16,21 +17,30 @@ export function Lista() {
     }, []);
 
     return (
-        <div>
-            <h1>Publicações</h1>
+
+    <>
+        <main class="bg-c-Azul  flex justify-center">
+            <div className="text-c-creme grid md:grid-cols-3 grid-cols-1 gap-16">
+                < Itempubli />
+            </div>
+        </main>
+
+                {/* <div>
             <ul>
                 {publicacoes.map((publicacao, index) => (
                     <li key={index}>
-                        <h2>{publicacao.esporte}</h2>
-                        <p>Local: {publicacao.local}</p>
-                        <p>Data: {publicacao.data}</p>
-                        <p>Hora: {publicacao.hora}</p>
-                        <p>Vagas: {publicacao.vagas}</p>
-                        <p>Distância: {publicacao.distancia}</p>
+                        <h2></h2>
+                        <p>Local: </p>
+                        <p>Data: </p>
+                        <p>Hora: </p>
+                        <p>Vagas: </p>
+                        <p>Distância: </p>
                     </li>
                 ))}
             </ul>
-        </div>
+        </div> */}
+    </>
+    
     );
 }
 

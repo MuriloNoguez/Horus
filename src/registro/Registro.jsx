@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Register } from "./componentesregistro/Register"
+import { Register } from "./componentesregistro/Register";
 
 
 function Registro() {
