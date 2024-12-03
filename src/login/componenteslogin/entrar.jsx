@@ -79,7 +79,8 @@ export function Entrar() {
           <h1 className='md:text-[2.5rem]  md:block hidden font-bold text-center'>Não possui conta?</h1>
           <h2 className='md:text-[2rem] md:block hidden text-center'>Registre-se agora e desfrute <br /> de nossos recursos</h2>
           <Link to={'/Registro'}>
-              <button className="md:w-[26rem] md:h-[2.3125rem] md:text-[1.5rem] bg-transparent text-c-creme border-2 border-c-creme font-bold rounded-md mt-5 md:block hidden">Registre-se</button>
+              <button className="md:w-[26rem] md:h-[2.3125rem] md:text-[1.5rem] bg-transparent text-c-creme border-2 border-c-creme font-bold rounded-md mt-5 md:block hidden"><Link to={'/Registro'}
+                            href="" className="md:text-[1.5rem] text-[0.625rem]">Registre-se</Link></button>
           </Link>
         </div>
       </section>
