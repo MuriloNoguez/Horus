@@ -3,9 +3,14 @@ import { Carousel } from "./Carrossel";
 export function MainHome() {
     return (
         <main className="m-0">
-            <section className="w-[100%] md:h-[43.75rem] h-[12.5rem] bg-c-Azul text-c-creme flex flex-col items-center">
-                <h2 className="md:text-[3.75rem] text-[1rem] font-bold text-center p-10">Encontre na Horus</h2>
-                <div className="md:mt-72 md:block hidden">
+            <section className="w-[100%] md:h-[40.75rem] h-[12.5rem] bg-c-Azul text-c-creme flex flex-col items-center">
+                <h2 className="md:text-[3.75rem] text-[1rem] font-bold text-center pt-1">Encontre na Horus</h2>
+
+                <div className=" md:mt-72 md:hidden">
+                    <Carousel visibleImagesCount={3}/>
+                </div>
+
+                <div className="md:mt-80 md:block hidden">
                     <Carousel visibleImagesCount={5}/>
                 </div>
                 
@@ -27,10 +32,15 @@ export function MainHome() {
                 </div>
                 
             </section>
-            <section className="w-[100%] md:h-[43.75rem] h-[12.5rem] bg-c-Azul text-c-creme flex flex-col items-center">
-                <h2 className="md:text-[3.75rem] text-[1rem] font-bold text-center p-10">Encontre na Horus</h2>
-                <div className="md:mt-72 md:block hidden">
+            <section className="w-[100%]  md:h-[43.75rem] h-[13.5rem] bg-c-Azul text-c-creme flex flex-col items-center">
+                <h2 className="md:text-[3.75rem] text-[1rem] font-bold text-center pt-10">Encontre na Horus</h2>
+                
+                <div className="md:mt-80 md:block hidden">
                     <Carousel visibleImagesCount={5}/>
+                </div>
+
+                <div className=" md:hidden">
+                    <Carousel visibleImagesCount={3}/>
                 </div>
                 
             </section>

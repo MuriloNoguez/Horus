@@ -40,7 +40,7 @@ export function Carousel({ visibleImagesCount = 3 }) {
   };
 
   return (
-    <div className="flex justify-center items-end space-x-2 h-44 ">
+    <div className="flex justify-center items-end space-x-2 h-36">
       {adjacentIndexes.map((index, idx) => (
         <img
           key={index}
