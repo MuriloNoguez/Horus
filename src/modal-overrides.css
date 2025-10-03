@@ -1,0 +1,23 @@
+/* Custom overrides for react-responsive-modal */
+.react-responsive-modal-modal {
+  background: #0a2540 !important; /* Use your Azul color or a close hex */
+  border: none !important;
+  box-shadow: 0 12px 32px 0 rgba(0,0,0,0.35);
+  padding: 0 !important;
+}
+
+.react-responsive-modal-closeButton {
+  color: #f7e9d0 !important; /* Use your creme color or a close hex */
+  filter: none !important;
+}
+
+.react-responsive-modal-closeButton svg {
+  fill: #f7e9d0 !important;
+}
+
+/* Custom icon color for clock/calendar inside modal */
+.newpost-modal-icon {
+  filter: none !important;
+  color: #f7e9d0 !important;
+  opacity: 1 !important;
+}
